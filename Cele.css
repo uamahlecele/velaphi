@@ -38,6 +38,7 @@ a{
      color: white; font-size: 22px; font-weight:600; margin-right: 25px;
   }
   #headingV{
+    text-transform: uppercase;
       color: #ffb800;
       text-align: center;
       font-family: sentient;
