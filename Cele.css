@@ -43,7 +43,7 @@ a{
       text-align: center;
       font-family: sentient;
       font-style: normal;
-      font-size: 4vw;
+      font-size: 2vw;
     }
 .izithakazelo{
   padding-left: 10px;
@@ -56,7 +56,7 @@ a{
   text-transform: capitalize;
   color: #ffffff; 
      margin: 0 auto; /*Centers the paragraph container */
-     word-spacing:100vw; 
+     word-spacing:90vw; 
 }
 /*courier font looks cool, i want to use it. the pre thing gave me an idea */ 
 
@@ -76,6 +76,7 @@ a{
     font-family: inherit;
 }
 .umlando{
+    word-spacing: 10px;
   font-weight: 400;
   text-transform: capitalize;
   color:#ffb800;
@@ -87,4 +88,8 @@ a{
 .henry{
   max-height:40%;
 padding-bottom: 1%;
+}
+
+#history{
+    word-spacing:09px ;
 }

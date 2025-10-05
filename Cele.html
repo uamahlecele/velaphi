@@ -20,28 +20,31 @@
     </nav>
 
     <h1 id="headingV"></h1>
+
     <div class="izithakazelo">
         <h3>Izithakazelo</h3>
         <p id="izithakazelo" class="preOut">
         </p>
         <div class="umlando">
-            <h3>History</h3>
+            <h3>Umlando</h3>
         </div>
+
         <p id="history"> 
 
         </p>
         <div class="celebrities">
 
             <h3>Well known people: </h3>
-            <li id="famous"> </li>
-            <img class="henry" src="images/Henry_Cele_Circa_1986.png" alt="Henry-Cele-1980s">
+
+            <ul id="famous"> </ul>
+            <!-- <img class="henry" src="images/Henry_Cele_Circa_1986.png" alt="Henry-Cele-1980s">
             <img class= "Baby" src="images/Baby_Cele.jpeg" alt="Baby-Cele-1997">
-            <img class="Willard" src="images/Willard-Cele-1951.jpeg" alt="Willard-Cele">
+            <img class="Willard" src="images/Willard-Cele-1951.jpeg" alt="Willard-Cele"> -->
 
           
         </div>
         <div class="additional">
-            <h3> Additional Readings</h3>
+            <h3> Additional Readings:</h3>
             <a href="https://indabukoyakho.com/" > Indabuko Yakho</a>
         </div>
     </div>
@@ -63,14 +66,14 @@
         const surnameH1 =document.querySelector("#headingV");
         const izithakazeloP =document.querySelector("#izithakazelo");
         const historyP = document.querySelector("#history")
-        const famousLi =document.querySelector("#famous")
+        const famousUl =document.querySelector("#famous")
 
         for (const surnamez of surnames) {
             if (surnamez.surname==="Cele"){
             surnameH1.innerHTML = `<h1>${surnamez.surname}</h1>`
             izithakazeloP.innerHTML=`<p> ${surnamez.izithakazelo}</p`
             historyP.innerHTML= `<p>${surnamez.history}</p>`
-            famousLi.innerHTML= `<li>${surnamez.famous_people}</li>`
+            famousUl.innerHTML= `<ul>${surnamez.famous_people}</ul>`
 
            }
             else{
