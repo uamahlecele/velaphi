@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cele.css">
+    <title>Cele</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"> <a href="index.html">VLPH</a> </div>
+            <ul>
+                <li><a href="#">about</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 id="headingV"></h1>
+    <div class="izithakazelo">
+        <h3>Izithakazelo</h3>
+        <p id="izithakazelo" class="preOut">
+        </p>
+        <div class="umlando">
+            <h3>History</h3>
+        </div>
+        <p id="history"> 
+
+        </p>
+        <div class="celebrities">
+
+            <h3>Well known people with your surname: </h3>
+            <li id="famous"> </li>
+            <img class="henry" src="images/Henry_Cele_Circa_1986.png" alt="Henry-Cele-1980s">
+            <img class= "Baby" src="images/Baby_Cele.jpeg" alt="Baby-Cele-1997">
+            <img class="willard" src="images/willard-cele.jpg" alt="Willard-Cele">
+
+          
+        </div>
+        <div class="additional">
+            <h3> Additional Readings</h3>
+            <a href="https://indabukoyakho.com/" > Indabuko Yakho</a>
+        </div>
+    </div>
+    <div id="kotaTax">
+        <h4> Buy me a Kota :] </h4>
+    </div>
+    </div>
+
+<!-- Loading my json file with all the data of izithakazelo, the history and the famous people associated with that surname.-->
+
+<script>
+    main();
+
+    
+
+     async function main(){
+        const surnames = await getData();
+        // console.log(surnames);
+        const surnameH1 =document.querySelector("#headingV");
+        const izithakazeloP =document.querySelector("#izithakazelo");
+        const historyP = document.querySelector("#history")
+        const famousLi =document.querySelector("#famous")
+
+        for (const surnamez of surnames) {
+            if (surnamez.surname==="Cele"){
+            surnameH1.innerHTML = `<h1>${surnamez.surname}</h1>`
+            izithakazeloP.innerHTML=`<p> ${surnamez.izithakazelo}</p`
+            historyP.innerHTML= `<p>${surnamez.history}</p>`
+            famousLi.innerHTML= `<li>${surnamez.famous_people}</li>`
+
+           }
+            else{
+                continue
+            }
+            
+        }
+     }
+
+   async function getData(){
+        const res = await fetch("surnames.json");
+        const data = await res.json();
+
+        return data;
+    }
+</script>
+
+</body>
+
+</html>

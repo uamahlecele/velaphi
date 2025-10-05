@@ -46,7 +46,24 @@
 
 </div>
 
+<script>
+    main();
 
+    
+
+     async function main(){
+        const surnames = await getData();
+        console.log(surnames);
+
+     }
+
+   async function getData(){
+        const res = await fetch("surnames.json");
+        const data = await res.json();
+
+        return data;
+    }
+</script>
 
 
 </body>
