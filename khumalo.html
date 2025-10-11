@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Cele.css">
-    <title>Cele</title>
+    <link rel="stylesheet" href="Khumalo.css">
+    <title>Khumalo</title>
 </head>
 
 <body>
@@ -33,13 +33,14 @@
 
         </p>
         <div class="celebrities">
-
+                <img id="leleti" src="images/Yesterday (2004).jpg" alt="Leleti-Khumalo">  
+                <img id="moses" src="images/Moses Khumalo.jpeg" alt="Moses-Khumalo"> 
+                <img id="alf" src="images/Alf Kumalo.jpeg" alt="Alf-Khumalo"> 
+                <img id="doctor" src="images/Doctor-Khumalo.jpg" alt="Dr-Khumalo">
             <h3>Well known people: </h3>
 
             <ul id="famous"> </ul>
-            <img class="henry" src="images/Henry_Cele_Circa_1986.png" alt="Henry-Cele-1980s">
-            <img class= "Baby" src="images/Baby_Cele.jpeg" alt="Baby-Cele-1997">
-            <img class="Willard" src="images/Willard-Cele-1951.jpeg" alt="Willard-Cele">
+           
 
           
         </div>
@@ -69,7 +70,7 @@
         const famousUl =document.querySelector("#famous")
 
         for (const surnamez of surnames) {
-            if (surnamez.surname==="cele"){
+            if (surnamez.surname==="khumalo"){
             surnameH1.innerHTML = `<h1>${surnamez.surname}</h1>`
             izithakazeloP.innerHTML=`<p> ${surnamez.izithakazelo}</p`
             historyP.innerHTML= `<p>${surnamez.history}</p>`

@@ -1,0 +1,225 @@
+body {
+  background-color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: 'Poppins', Times, serif, 'Sentient';
+  padding: 0%;
+  display: grid;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  text-decoration: none;
+  background: rgb(0, 0, 0);
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.navdiv {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: Sentient;
+  font-size: 35px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  display: inline-block
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 25px;
+}
+
+#headingV {
+  color: #ffb800;
+  text-align: center;
+  font-family: sentient;
+  font-style: normal;
+  font-size: 2vw;
+}
+
+.izithakazelo {
+  color: white;
+  text-transform: capitalize;
+}
+.list-celeb{
+  display: flex;
+  display: inline-block;
+}
+#leletiP{
+  margin: 0%;
+  padding-left: 2rem;
+  cursor: pointer;
+}
+#leletiP:hover{
+  color: #ffb800;
+}
+#mosesP{
+  padding-left: 28em;
+
+}
+#indabuko:hover{
+color: #ffb800;
+}
+.preOut {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 0 auto; /* Centers the paragraph container */
+  word-spacing:100vw; /* Forces words onto new lines */
+/* font-family:  Courier;
+font-style: bold; */
+}
+
+/*courier font looks cool, i want to use it. the pre thing gave me an idea */
+
+#kotaTax {
+  color: #F8B700;
+  text-align: center;
+  text-transform: lowercase;
+  cursor: pointer;
+
+}
+
+.additional {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.celebrities {
+  display: block;
+  object-fit: contain;
+  font-size: medium;
+  font-family: inherit;
+}
+
+.doctor {
+  image-orientation: flip;
+  object-fit: cover;
+}
+
+#doctor {
+  max-width: 29%;
+  width: 22rem;
+}
+
+#image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+#leleti {
+  max-width: 25%;
+}
+
+#alf {
+  max-width: 28%;
+
+
+}
+
+#moses {
+  max-width: 18.7%;
+}
+p{
+  padding-left: 10px;
+}
+.umlando {
+  padding-left: 10px;
+  font-weight: 400;
+  text-transform: capitalize;
+  color:#ffb800;
+}
+
+#izithakazeloH{
+  padding-left: 10px;
+  text-transform: capitalize;
+}
+/*body{
+    background-color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: 'Poppins', Times, serif;
+    padding: 0%;
+    display: grid;
+}
+.navbar{
+    text-decoration: none;
+    background: rgb(44, 44, 44); 
+    padding-right: 15px; padding-left: 15px;
+  }
+  .navdiv{
+    text-decoration: none;
+     display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo{
+   
+    font-size: 35px; font-weight: 600; color:white; 
+    text-decoration: none;
+  }
+  li{
+    text-decoration: none;
+    list-style: none; display: inline-block
+  }
+  li a{
+    text-decoration: none;
+     color: white; font-size: 18px; font-weight:600; margin-right: 25px;
+  }
+  #headingV{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: sentient;
+}
+.izithakazelo{
+    color: white;
+}
+.preOut{ 
+  text-transform: capitalize;
+    font-size: large;
+    color: #ffffff; 
+   
+}
+/*courier font looks cool, i want to use it. the pre thing gave me an idea */
+/*
+#kotaTax{
+   color:#F8B700;
+    text-align: center;
+    text-transform: lowercase;
+    cursor: pointer;
+
+}
+.additional{
+    color: aliceblue;
+    text-decoration: none;
+}
+.celebrities{
+  display: block;
+  object-fit: contain;
+    font-size: medium;
+    font-family: inherit;
+}
+.doctor{
+image-orientation: flip;
+}
+.umlando{
+  font-weight: 400;
+  text-transform: uppercase;
+  color: 
+  #f89500;
+}
