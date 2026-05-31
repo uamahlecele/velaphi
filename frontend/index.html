@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Velaphi</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"> <a class="logoC" href="index.html">VLPH</a> </div>
+
+            <ul>
+                <li><a class="about" href="#">about</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1 class="mainHeading">'VELAPHI</h1>
+    <p class="pText">find your family clan names </p>
+
+    <div class="surname-lib">
+        <ul>
+            <li id="styleOut"><a href="/Cele.html">Cele</a></li>
+            <li id="styleOut"><a href="/Khumalo.html">Khumalo</a></li>
+            <li id="styleOut"><a href="#">Dladla</a></li>
+            <li id="styleOut"><a href="#">Mkhize</a></li>
+            <li id="styleOut"><a href="#">Dlomo</a></li>
+            <li id="styleOut"><a href="Mkhwanazi.html">Mkhwanazi</a></li>
+            <li id="styleOut"><a href="#">Dlamini</a></li>
+            <li id="styleOut"><a href="#">Ndlovu</a></li>
+            <li id="styleOut"><a href="#">Ngcobo</a></li>
+            <li id="styleOut"><a href="#">Shezi</a></li>
+            <li id="styleOut"><a href="#">Mhlongo</a></li>
+            <li id="styleOut"><a href="#">Mthembu</a></li>
+            <li id="styleOut"><a href="#">Hlongwane</a></li>
+            <li id="styleOut"><a href="#">Majozi</a></li>
+            <br>
+            <li id="styleOut"><a href="#">Khumalo</a></li>
+            <li id="styleOut"><a href="#">Zuma</a></li>
+            <li id="styleOut"><a href="#">Biyela</a></li>
+            <li id="styleOut"><a href="#">Mthethwa</a></li>
+            <li id="styleOut"><a href="#">Ngema</a></li>
+            <li id="styleOut"><a href="#">Sibisi</a></li>
+            <li id="styleOut"><a href="#">Mnguni</a></li>
+            <li id="styleOut"><a href="#">Bhengu</a></li>
+            <li id="styleOut"><a href="#">Dube</a></li>
+            <li id="styleOut"><a href="#">Buthelezi</a></li>
+            <li id="styleOut"><a href="#">Chiliza</a></li>
+            <li id="styleOut"><a href="#">Radebe</a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="search">
+        <input id="inputSurname" type="text" name="inputSearch" autocomplete="off" placeholder="Enter surname">
+        <br>
+        <br>
+        <button onclick="findSurname()" id="submitSurname" name="submitSearch"> Search </button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br><br><br><br>
+    <div class="marquee">
+        <div class="marquee-content">
+            <p>IZITHAKAZELO. IZIDUKO. DIBOKO.</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        main();
+
+
+
+        function findSurname() {
+            const input = document.getElementById("inputSurname").value.trim().toLowerCase();
+
+            fetch('surnames.json')
+                .then(response => response.json())
+                .then(data => {
+                    //searching for a match
+
+                    const match = data.find(item => item.surname.toLowerCase() === input);
+
+                    if (match) {
+                        window.location.href = match.page;
+                    } else {
+                        alert('We could not find the surname.')
+                    }
+                })
+
+            // console.log(surnames);
+            // const surnameH1 = document.querySelector("#headingV");
+            // const izithakazeloP = document.querySelector("#izithakazelo");
+            // const searchBar = document.querySelector("#inputSurname");
+            // const buttonsearchSurname=document.querySelector("#submitSurname");
+
+
+            // for (const searchingSurnames of surnames) {
+            //     if (searchingSurnames.surname in surnames){
+            //         window.location.href = searchingSurnames.page
+            // surnameH1.innerHTML = `<h1>${surnamez.surname}</h1>`
+            // izithakazeloP.innerHTML=`<p> ${surnamez.izithakazelo}</p`
+            // historyP.innerHTML= `<p>${surnamez.history}</p>`
+            // famousUl.innerHTML= `<ul>${surnamez.famous_people}</ul>`
+
+
+            //            }
+            //             else{
+            //                  alert('We did not find your surname.')
+            //             }t
+
+            //         }
+            //      }
+
+            //    async function getData(){
+            //         const res = await fetch("surnames.json");
+            //         const data = await res.json();
+
+            //         return data;
+            //     }
+        }
+    </script>
+
+    <div class="kota-tax">
+        <p id="kota">Buy me a kota :]</p>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- So I Remember: I merged my old homepage design from 2024 with this new one, just take the surnames from the bottom, that's the main thing that's different. Maybe the script tag too. -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="">
+
+    <title>Velaphi</title>
+</head>
+<body>
+    <h1>Velaphi</h1>
+<div class="nav-bar"> 
+    <h3>About</h3>
+
+</div>
+<p>Find out about your family clan names and more. </p>
+
+<div class="popular-surnames">
+
+<a href="Cele.html">Cele</a>
+<a href="Mkhize.html">Mkhize</a>
+<a href="Khumalo.html">Khumalo</a>
+<a href="Dladla.html">Dladla</a>
+<a href="Ndlovu.html">Madlala</a>
+<a href="Mkhwanazi.html">Mkhwanazi</a>
+<br>
+<a href="Biyela.html">Biyela</a>
+<a href="Ngcobo.html">Ngcobo</a>
+<a href="Dlamini.html">Dlamini</a>
+<a href="Nkosi.html">Nkosi</a>
+<a href="Zulu.html">Zulu</a>
+<a href="Chiliza.html">Chiliza</a>
+<a href="Hlongwane.html">Hlongwane</a>
+<a href="Zwane.html">Zwane</a>
+
+
+</div>
+
+<div class="searchbar">
+<input type="text" placeholder="Search...">
+<button id="search-button" type="button">Search</button>
+</div>
+<br>
+<div class="kota-me">
+    <h3>Buy me a milktart :] </h3>
+
+</div>
+
+-- <script>
+    main();
+
+    
+
+     async function main(){
+        const surnames = await getData();
+        console.log(surnames);
+
+     }
+
+   async function getData(){
+        const res = await fetch("surnames.json");
+        const data = await res.json();
+
+        return data;
+    }
+</script> -->
+
+
+<!-- </body>
+</html> -->
