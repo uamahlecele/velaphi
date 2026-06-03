@@ -1,20 +1,9 @@
--- @block
-
-CREATE TABLE surnames(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    isibongo TEXT,
-    izithakazelo TEXT,
-    umlando TEXT,
-    well_known_people JSON
-
-);
 
 /*
 Adding a single record */
 -- @block
 INSERT IGNORE INTO surnames(isibongo,izithakazelo,umlando,well_known_people) VALUES
 ('','','','[""]')
-
 
 /*
 Adding a group of records*/

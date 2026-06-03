@@ -6,16 +6,18 @@
  * To build my server I'll make use of Express.js (Web Framework. Think Flask in python)
  */
 
+
 // 1. Express.js setup
-const ejs = require('ejs')
 require("dotenv").config({ quiet: true });
 const path = require('path');
-
 
 const express = require('express');
 const dbConnection = require('./config/database.js');
 const app = express();
-app.use(express.static(path.join(__dirname, '../frontend')));
+
+// this is middleware that will return a static file
+
+app.use(express.static(path.join(__dirname, '../public')));
 
 /**  Sets EJS as the view engine 
  * A view engine is a software component that allows 
@@ -28,7 +30,7 @@ app.set('views', __dirname + '/views');
 
 //this is the home directory
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 app.get('/about', (req, res) => {
@@ -44,6 +46,10 @@ app.get('/surname', async (req, res) => { //:isibongo is the placeholder for the
     const surname = req.query.inputSearch // e.g cele will be stored in the variable surname
     const foundSurname = await dbConnection.getSurname(surname)
 
+    if (!foundSurname) {
+        return res.send("Surname not found!");
+    }
+
     const { id, isibongo, izithakazelo, umlando, well_known_people } = foundSurname;
     res.render('index', {
         surname: isibongo,
@@ -54,8 +60,7 @@ app.get('/surname', async (req, res) => { //:isibongo is the placeholder for the
 
 });
 
-
 app.listen(process.env.PORT, () => {
-    console.log("PORT IS RUNNING!")
+    console.log(`PORT IS RUNNING at PORT ${process.env.PORT}!!`)
 });
 

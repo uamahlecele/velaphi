@@ -5,11 +5,11 @@ const mysql = require("mysql2");
 // Create the Database Connection
 const pool = mysql.createConnection({
     host: "localhost",
-    user: "root",
+    user: 'root',
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
 
-}).promise() // using the promise api for mySQL. 
+}).promise() // using the promise api for MySQL. 
 
 // Connection is verified
 pool.connect((err) => {
@@ -18,7 +18,7 @@ pool.connect((err) => {
         return;
     }
 
-    console.log("CONNECTION SUCCESSFUL!");
+    // console.log("CONNECTION SUCCESSFUL!");
 
     // Query runs AFTER connection is established
 

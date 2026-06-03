@@ -1,0 +1,133 @@
+body{
+  font-family: poppins;
+  background-color: black;
+  background-image: url("/images/HenryCeleEdit.png");
+  background-size: cover; 
+  background-image: no-repeat;
+  background-size: wrap;  
+ 
+}
+
+#submitSurname:hover{
+    cursor: pointer;
+  }
+
+    #styleOut:hover{
+      text-decoration: underline;
+      animation-duration: 1s ease-in;
+      color: #ffb800;
+    }
+
+    a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+    a:hover{
+      color: #ffb800;
+    }
+.container{
+    text-decoration: none;
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    vertical-align: top;
+
+}
+.mainHeading{
+  font-weight: 500;
+    padding-top: 45px;
+    font-family: sentient;
+    font-style: normal;
+    text-align:center ;
+    color: #ffb800;
+    font-size: 4vw;
+}
+.logo {
+    padding-left:22px;
+    font-family: Sentient;
+    font-size: 35px;
+    font-weight: 455;
+    color: white;
+    text-decoration: none;
+    font-size: 2vw;
+  }
+  .logoC{
+    color: white;
+  }
+  .navdiv {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  li{
+    text-decoration: none;
+    list-style: none; display: inline-block;
+  }
+ .about{
+    display: flex;
+    text-decoration: none;
+    color: white; 
+    font-size: 29px; 
+    font-weight:400; 
+    margin-right: 25px;
+
+  }
+  .search{
+    text-align: center;
+    border-radius: 3px;
+  }
+#styleOut{
+    text-align: center;
+ 
+}
+#inputSurname{
+text-align: center;
+outline: none;
+border: none;
+width: 500px;
+height: 40px;
+border-radius: 19px;
+}
+#submitSurname{
+width: 120px;
+height: 35px;
+border: none;
+border-radius: 32px;
+}
+
+.surname-lib{
+  text-align: center;
+  display: grid;
+}
+.pText{
+  text-align: center;
+  text-align: center;
+    color: white;
+    font-weight: 400;
+}
+#kota{
+  color:#F8B700;
+  text-align: center;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+/* .marquee { /*CHATGPT HELPED 
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: marquee 23s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+} */
