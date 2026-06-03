@@ -20,8 +20,7 @@ Velaphi is a full stack web application that allows users to search for surnames
 
 Node.js
 Express.js
-
-# Database
-
 MySQL
+EJS (Embedded JavaScript Templates)
+
 
