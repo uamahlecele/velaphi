@@ -23,6 +23,7 @@ app.use(express.static(path.join(__dirname, '../public')));
  * A view engine is a software component that allows 
  * the rendering of dynamic content onto a web page. 
 */
+
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
