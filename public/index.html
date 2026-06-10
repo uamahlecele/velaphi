@@ -4,17 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <link rel="stylesheet" href="css/index.css">
     <script src="search.js" defer></script>
 
     <title>Velaphi</title>
 </head>
 
 <body>
+    <!-- Navigation Bar  -->
     <header>
         <nav>
             <a href="index.html">velaphi</a>
             <a href="about.html">about</a>
+
+            <!-- Hamburger Menu -->
+            <div class="containerHam" onclick="hamburgerAnimation(this)">
+
+                <div class="firstBar"></div>
+                <div class="secondBar"></div>
+                <div class="thirdBar"></div>
+            </div>
+
+
 
         </nav>
     </header>
@@ -67,6 +78,7 @@
     </div>
     <div class="search">
 
+
         <form action="/surname" method="get">
 
             <input id="inputSurname" type="text" name="inputSearch" autocomplete="off" placeholder="Enter surname">
@@ -82,18 +94,21 @@
     <br>
     <br>
     <br>
-    <br><br><br><br><br>
-    <div class="marquee">
-        <div class="marquee-content">
-            <p>IZITHAKAZELO. IZIDUKO. DIBOKO.</p>
-        </div> -->
-    </div>
+    <br><br><br><br><br>-->
 
+    <!-- <div class="marquee">
+        <p>IZITHAKAZELO. IZIDUKO. DIBOKO.</p>
 
-    <!-- <div class="kota-tax">
-        <p id="kota">Buy me a kota :]</p>
-    </div>
     </div> -->
+    </div>
+
+    <script>
+        function hamburgerAnimation(animate) {
+
+            animate.classList.toggle("change");
+        }
+    </script>
+
 </body>
 
 </html>

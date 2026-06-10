@@ -81,6 +81,32 @@ body{
     text-align: center;
  
 }
+
+.firstBar, .secondBar, .thirdBar{
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+
+}
+
+.containerHam{
+  display: inline-block; 
+  cursor: pointer;
+  
+}
+
+.change .firstBar {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .secondBar {opacity: 0;
+}
+
+.change .thirdBar {
+  transform: translate(0, -11px) rotate(45deg);
+}
 #inputSurname{
 text-align: center;
 outline: none;
