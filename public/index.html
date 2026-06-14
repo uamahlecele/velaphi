@@ -5,44 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+
+    <!-- <link rel="stylesheet" href="output.css"> -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+
     <script src="search.js" defer></script>
 
     <title>Velaphi</title>
 </head>
 
 <body>
+
     <!-- Navigation Bar  -->
+
     <header>
-        <nav>
+        <nav class="navdiv">
             <a href="index.html">velaphi</a>
             <a href="about.html">about</a>
 
             <!-- Hamburger Menu -->
-            <div class="containerHam" onclick="hamburgerAnimation(this)">
+            <!-- <div class="containerHam" onclick="hamburgerAnimation(this)">
 
                 <div class="firstBar"></div>
                 <div class="secondBar"></div>
                 <div class="thirdBar"></div>
-            </div>
-
+            </div> -->
 
 
         </nav>
     </header>
 
-    <div class="w-auto bg-[url(/images/HenryCeleEdit.png)] bg-center object-cover h-auto bg-cover ">
+    <div>
 
-        <nav class="navbar">
-            <div class="navdiv">
-                <!-- <div class="logo"> <a class="logoC" href="index.html">VLPH</a> </div> -->
-
-                <ul>
-                    <!-- <li><a class="about" href="#">about</a></li> -->
-                </ul>
-            </div>
-        </nav>
         <h1 class="mainHeading">'VELAPHI</h1>
-        <p class="pText">find your family clan names </p>
+        <p class="pText">find out more about your family surname </p>
+
+    </div>
+    <div class="search">
+
+        <form action="/surname" method="get">
+            <input class="" id="inputSurname" type="text" name="inputSearch" autocomplete="off"
+                placeholder="Enter surname">
+            <br>
+            <br>
+            <!-- <button type="submit" id="submitSurname"> Search </button> -->
+        </form>
 
         <!-- <div class="surname-lib">
             <ul>
@@ -75,129 +83,33 @@
                 <li id="styleOut"><a href="#">Radebe</a></li>
             </ul>
         </div> -->
-    </div>
-    <div class="search">
-
-
-        <form action="/surname" method="get">
-
-            <input id="inputSurname" type="text" name="inputSearch" autocomplete="off" placeholder="Enter surname">
-            <br>
-            <br>
-            <button type="submit" id="submitSurname"> Search </button>
-        </form>
 
     </div>
 
-    <!-- <br>
     <br>
     <br>
     <br>
     <br>
-    <br><br><br><br><br>-->
+    <br>
+    <br>
+    <br><br><br><br>
 
-    <!-- <div class="marquee">
+    <!-- <div>
         <p>IZITHAKAZELO. IZIDUKO. DIBOKO.</p>
-
     </div> -->
-    </div>
 
-    <script>
+
+    <!-- <script>
         function hamburgerAnimation(animate) {
 
             animate.classList.toggle("change");
         }
-    </script>
-
+    </script> -->
+    <footer>
+        <div id="kota">
+            <a href="https://buymeacoffee.com/khumbu.za" target="_blank">Buy me a kota</a>
+        </div>
+    </footer>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- So I Remember: I merged my old homepage design from 2024 with this new one, just take the surnames from the bottom, that's the main thing that's different. Maybe the script tag too. -->
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="">
-
-    <title>Velaphi</title>
-</head>
-<body>
-    <h1>Velaphi</h1>
-<div class="nav-bar"> 
-    <h3>About</h3>
-
-</div>
-<p>Find out about your family clan names and more. </p>
-
-<div class="popular-surnames">
-
-<a href="Cele.html">Cele</a>
-<a href="Mkhize.html">Mkhize</a>
-<a href="Khumalo.html">Khumalo</a>
-<a href="Dladla.html">Dladla</a>
-<a href="Ndlovu.html">Madlala</a>
-<a href="Mkhwanazi.html">Mkhwanazi</a>
-<br>
-<a href="Biyela.html">Biyela</a>
-<a href="Ngcobo.html">Ngcobo</a>
-<a href="Dlamini.html">Dlamini</a>
-<a href="Nkosi.html">Nkosi</a>
-<a href="Zulu.html">Zulu</a>
-<a href="Chiliza.html">Chiliza</a>
-<a href="Hlongwane.html">Hlongwane</a>
-<a href="Zwane.html">Zwane</a>
-
-
-</div>
-
-<div class="searchbar">
-<input type="text" placeholder="Search...">
-<button id="search-button" type="button">Search</button>
-</div>
-<br>
-<div class="kota-me">
-    <h3>Buy me a milktart :] </h3>
-
-</div>
-
--- <script>
-    main();
-
-    
-
-     async function main(){
-        const surnames = await getData();
-        console.log(surnames);
-
-     }
-
-   async function getData(){
-        const res = await fetch("surnames.json");
-        const data = await res.json();
-
-        return data;
-    }
-</script> -->
-
-
-<!-- </body>
-</html> -->
