@@ -45,6 +45,7 @@ body{
   .search{
     text-align: center;
     border-radius: 3px;
+    flex-grow: 1;
   }
 #styleOut{
     text-align: center;
