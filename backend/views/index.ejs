@@ -31,11 +31,11 @@
         <%=umlando%>
     </p>
 
-    <h3 class="px-2 py-2
+    <h3 class="px-2 py-20
      text-velaphiYellow  text-center text-3xl
      "> Well Known People </h3>
 
-    <div class="w-full h-50 rounded-lg flex justify-center  px-2 font-bold text-white gap-3">
+    <div class="w-full h-50 rounded-lg flex justify-center  px-2 font-bold text-white gap-30">
 
 
         <!-- Iterates through the JSON list found in the column well_known_people from our database-->
@@ -47,12 +47,12 @@
                     <% } else { %>
                         <div>No image found</div>
                         <% } %>
-                            <p>
+                            <a class="hover" href="<%= person.links %>" target="_blank">
                                 <%= person.name %>
                                     <ul class="font-light">
                                         <%= person.occupation %>
                                     </ul>
-                            </p>
+                            </a>
 
             </div>
             <% }) %>
