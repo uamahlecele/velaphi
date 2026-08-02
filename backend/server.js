@@ -51,13 +51,13 @@ app.get('/surname', async (req, res) => { //:isibongo is the placeholder for the
         return res.send("Surname not found!");
     }
 
-    const { id, isibongo, izithakazelo, umlando, well_known_people, images } = foundSurname;
+    const { id, isibongo, izithakazelo, umlando, well_known_people } = foundSurname;
     res.render('index', {
         surname: isibongo,
         izithakazelo: izithakazelo,
         umlando: umlando,
-        famous: well_known_people,
-        images: images
+        well_known_people: well_known_people
+
     });
 
 });

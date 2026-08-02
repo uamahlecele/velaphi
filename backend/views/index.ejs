@@ -35,17 +35,34 @@
      text-velaphiYellow  text-center text-3xl
      "> Well Known People </h3>
 
-    <li class="px-2 font-bold text-white">
+    <div class="w-full h-50 rounded-lg flex justify-center  px-2 font-bold text-white gap-3">
 
-        <%=famous%>
-    </li>
+
+        <!-- Iterates through the JSON list found in the column well_known_people from our database-->
+        <% well_known_people.forEach(person=> { %>
+
+            <div class="">
+                <% if (person.image) { %> <!-- If true-->
+                    <img class=" rounded-lg center p-1 w-full h-full object-cover" src="<%= person.image %>">
+                    <% } else { %>
+                        <div>No image found</div>
+                        <% } %>
+                            <p>
+                                <%= person.name %>
+                                    <ul class="font-light">
+                                        <%= person.occupation %>
+                                    </ul>
+                            </p>
+
+            </div>
+            <% }) %>
+
+    </div>
     <br>
-    <img class="px-1 object-center transition-all duration-300 cursor-pointer max-w-full hover:scale-99 rounded-md h-auto object-contain border-r-8"
-        src="<%=images%>">
-    <!-- <img src="images/Baby_Cele.jpeg" alt=""> -->
 
 
-    <h3 class="px-2 text-white font-bold text-3xl"> Additional Resources</h3>
+    <br>
+    <h3 class="px-2 text-white font-bold text-2xl"> Additional Resources</h3>
 
     <li class="px-2 font-bold text-white "> <a href="https://indabukoyakho.com/2025/06/02/cele/"> Indabuko
             Yakho</a>

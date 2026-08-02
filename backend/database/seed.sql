@@ -2,14 +2,14 @@
 /*
 Adding a single record */
 -- @block
-INSERT IGNORE INTO surnames(isibongo,izithakazelo,umlando,well_known_people, images) VALUES
+INSERT IGNORE INTO surnames(isibongo,izithakazelo,umlando,well_known_people) VALUES
     ('cele',
     'Ndosi, Magaye, Nkomo isengwa ilele Nkomo kayivuswa, Khumbuza, Siqunga esihle esingahlalwa nyoni. Mkhokheli owakhokhela isizwe ekugqilazweni. Dubandlela, Magaye ongangolwandle.',
     'Abantu bakwaCele bangaMalala Nguni ngokwezigaba zabaNguni. Lesi sibongo sakwaCele siphuma kwesakwaMthethwa. Ukhokho wabantu bakwaCele nguMadango kaNdunakazi kaMthethwa kaNyambose kaKhubazi. UMadango endlunkulu wazala uXaba owazala uKhayi owazala uJobe owazala uGodongwana (inkosi uDingiswayo). Ekhohlo uMadango wazala uCele owazala uLugogo owazala uNdosi owazala uMaganga owazala unqumela owazala uLanga owazala uMkhokheli owazala uDubandlela. Inkosi uDubandlela yayakhe umuzi wayo endaweni osekuyi Groutville manje. Ngesikhathi sokubusa kwenkosi uDingiswayo kwaMthethwa kwaCele kwakubusa yona inkosi uDubandlela. Inkosi uDubandlela yaphila isikhathi eside ngendlela eyisimanga angangokuthi amadodana ayo okwakufanele athathe ubukhosi emva kwayo aze ashona kwawona. Endala kwakunguMdinsilwa owashona nendodana yakhe bengabusanga. Encane kaakunguVico, naye washona uyise esawadla anhlamvana. Kwase kuthi amadodana kaVico, oMande noMagaye, bathathelana izikhali babanga ubukhosi uyisemkhulu esaphila. Ekubangeni kwabazukulu benkosi uDubandlela nguMagaye owadla umhlanganiso. UMagaye washiya emzini kayisemkhulu wayokwakha umuzi wakhe emthonjeni womfula uMhlali, kwathi umfowabo uMande wawela umfula uMvoti wazokwakha lapho sekuyidolobha lakwaDukuza khona. \n Kwathi lezi zinsizwa zisazihlalele emizini yazo wafika izithunywa zivela eSilweni uShaka, saqale saya kuMande, sathi, ithi iNgonyama impi yayo ilambile ifuna ukuba ithole ukudla ukuze ithole amandla okulwa. UMande wakhomba inja endala ezacile wathi kabathathe yona bayokudla. Lezo zithunywa zedlulela kuMagaye zafika zasho umlayezo ofanayo, yena waziphatha kahle wazihlabisa nokuzihlabisa,wethembisa nokuthi uzozinekeza konke ezikufunayo. ILembe layizwa indelelo kaMande lathukuthela lathelwa ngamanzi. UMande wafunda kwezakhe washeshe wabaleka nabantu bakhe bashiya yonke imfuyo yabo esitheni. Babaleka bayocasha ngasolwandle. ILembe lathi makangalandelwa kodwa makancishwe ukudla. Yabhoka indlala kangangokuthi uMande waze wacela umfowabo uMagaye owayehlezi ngokunethezeka neSilo uShaka ukuba makayomncengela kuso. Ngempela uMagaye wamncengela umfwabo eNgonyameni yakwaZulu. Yavuma yathi makaphume ekubhaceni abuyele emzini wakhe. Kwathu lapho esazihlalele enethezekile zaphinde zaqhumuka futhi leziya zithunywa zeLembe. Kulokhu zafike zathi ithi iNgonyama sizobamba leya nja ezacile siyibulala sidle. Ngempela zazizobika ukuthi uMande makazilungiselele impi ngoba wayezohlaselwa kungekudala. Wafunda kwezakhe futhi uMande wabaleka, wavele wanyamalala. Kwase kuthi iLembe lavele lazikhokhisela ngokuthi livele lakhe umuzi walo wakwa Dukza emanxiweni kaMande. Lowo muzi yiwo osulidolobha manje. Kwathi lapho iSilo uShaka sesikhotheme sekubuza iSilo uDingane, iSilo uDingana saqala umkhankaso waso wokubulala bonke ababengabangane beLembe. UMagaye naye wabulawa. Esekhotheme uMgengi sekubusa iSilo uDingane waqhamuka futhi uMande. Kuthe lapho esahleli ejabulele nanokuthi isitha sakhe asisekho kwaqhamuka uNqetho Qwabe wahlasela uMande. Bahlakazeka abantu bakwaCele bagcwala lonke elakwaZulu.',
-    '["Amahle Cele, South African Artist", " Henry Cele, Football Player & Actor", " Baby Cele, Actor"]', '["images/Baby_Cele.jpeg"]')
+    '[{"name": "Willard Cele", "occupation": "Pioneer of Kwela music", "image": "images/Willard-Cele-1951.jpeg"}, {"name": "Henry Cele", "occupation": "Football Player & Actor", "image": "images/Henry_Cele_Shaka.jpeg"}, {"name": "Baby Cele", "occupation": "Actor", "image": "images/Baby_Cele.jpeg"}]')
 
 
-/*
+/* 
 Adding a group of records*/
 
 -- @block
@@ -17,7 +17,8 @@ INSERT IGNORE INTO surnames(isibongo, izithakazelo, umlando, well_known_people) 
 ('khumalo',
  'Mntungwa Mbulaz''omnyama Nina bakaBhej'' eseNgome Nin'' enadl''umuntu nimyenga ngendaba Zindlovu ezibantu, Zindlovu ezimacocombela',
  'AbakwaKhumalo Njengoba abaNguni behlukaniswe izigaba ezinhlanu, kukhona abaNguni baseMbo, abaNguni baseButhonga, aMaNtungwa Nguni, AMaLala noma AmaNhlenga Nguni, kanye namaMaDebe Nguni. AbakwaKhumalo bawela esigabeni saMaNtungwa Nguni, baphinde baziwe ngokuthi bangaMantungwa (hhayi isigaba sobuNguni) ngoba bezalwa nguMntungwa indodana kaMbulazi kaNdabezitha kaMmusi. UMbulazi wayenamadodana amabili, okwakunguMntungwa kanye nomnewabo uMabaso(owesibongo)',
- '["Leleti Khumalo, South African Actress", "Dr Khumalo, South African Football Player", "Alf Khumalo, South African Photographer"]'),
+    '[{"name": "Leleti Khumalo", "occupation": "South African Actress", "image": "images/Leleti Khumalo.jpg"}, {"name": "Doctor "16V" Khumalo", "occupation": Football Player", "image": "images/Doctor-Khumalo.jpg"}, {"name": "Alf Kumalo", "occupation": "Photographer", "image": "images/Alf Kumalo.jpeg"}]')
+
 
 ('dladla',
  'Ndabezitha, Mgabadeli, Owagabadel''inkundla yakwaBulawayo. Gadlela, Dwala, Mpembe, Mhlophe, Vezi, Dladla, Nyazitha Magalel''agoqe njengeshongololo!!',

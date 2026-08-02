@@ -8,7 +8,6 @@ CREATE TABLE IF NOT EXISTS surnames(
     isibongo VARCHAR(200) UNIQUE NOT NULL,
     izithakazelo TEXT,
     umlando TEXT,
-    well_known_people JSON,
-    images JSON 
+    well_known_people JSON
 
 );
