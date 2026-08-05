@@ -3,6 +3,7 @@ body{
   font-family: poppins;
   background-image: url("/images/HenryCeleEdit.png");
   background-image: no-repeat;
+  
   background-position: center;
   background-attachment:fixed; /**This was what I was looking for!*/
   background-size: cover; 
