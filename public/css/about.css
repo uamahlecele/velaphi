@@ -1,0 +1,73 @@
+body{
+    margin: 40px;
+  font-family: poppins;
+  background-image: url("/images/Texturelabs_Paper_381XL.jpg");
+  background-image: no-repeat;
+  
+  background-position: center;
+  background-attachment:fixed; /**This was what I was looking for!*/
+  background-size: cover; 
+ 
+}
+
+    a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+    a:hover{
+      color: #ffb800;
+    }
+
+h1{
+  font-weight: 500;
+    padding-top: 45px;
+    font-family: sentient;
+    font-style: normal;
+    text-align:center ;
+    color: #ffb800;
+    font-size: 4vw;
+}   
+
+  .navdiv {
+    margin:1px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: clamp(1rem, 2.5vw, 2rem); /* This keeps the font size between 1rem (the smallest it can ever be) and 2rem the largest*/
+  }
+
+  li{
+    text-decoration: none;
+    list-style: none; display: inline-block;
+  }
+  
+h3{
+  font-weight: 500;
+    padding-top: 45px;
+    font-family: sentient;
+    font-style: normal;
+    color: #ffb800;
+    font-size: 4vw;
+}   
+
+p{
+  text-align: center;
+  text-align: center;
+  color: white;
+  font-family: poppins;
+  font-weight: 400;
+}
+
+/* .footer{
+    
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  
+  } */
+
+    footer:hover{
+      color: #ffb800;
+    }
