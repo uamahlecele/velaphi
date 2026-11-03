@@ -1,105 +1,154 @@
-body{
-    margin: 40px;
-  font-family: poppins;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 24px 20px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  font-family: poppins, sans-serif;
   background-image: url("/images/16v.png");
-  background-image: no-repeat;
-  
+  background-repeat: no-repeat;
   background-position: center;
-  background-attachment:fixed; /**This was what I was looking for!*/
-  background-size: cover; 
- 
+  background-attachment: fixed;
+  background-size: cover;
 }
-    a{
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-    }
-    a:hover{
-      color: #ffb800;
-    }
 
+@media (min-width: 768px) {
+  body {
+    padding: 40px;
+  }
+}
 
-.mainHeading{
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+a:hover {
+  color: #ffb800;
+}
+
+.mainHeading {
   font-weight: 500;
-    padding-top: 45px;
-    font-family: sentient;
-    font-style: normal;
-    text-align:center ;
-    color: #ffb800;
-    font-size: 4vw;
+  padding-top: 0;
+  margin: 0 0 10px 0;
+  font-family: sentient, serif;
+  font-style: normal;
+  text-align: center;
+  color: #ffb800;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
 }
 
-
-  .navdiv {
-    margin:1px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: clamp(1rem, 2.5vw, 2rem); /* This keeps the font size between 1rem (the smallest it can ever be) and 2rem the largest*/
-  }
-
-  li{
-    text-decoration: none;
-    list-style: none; display: inline-block;
-  }
-
-  .search{
-    text-align: center;
-    border-radius: 3px;
-    flex-grow: 1;
-  }
-#styleOut{
-    text-align: center;
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
 }
 
-.firstBar, .secondBar, .thirdBar{
+.navdiv {
+  margin: 0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  display: inline-block;
+}
+
+.search {
+  text-align: center;
+  border-radius: 3px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search form {
+  width: 100%;
+  max-width: 500px;
+}
+
+#styleOut {
+  text-align: center;
+}
+
+.firstBar, .secondBar, .thirdBar {
   width: 35px;
   height: 5px;
   background-color: #333;
   margin: 6px 0;
   transition: 0.4s;
-
 }
 
-.containerHam{
-  display: inline-block; 
+.containerHam {
+  display: inline-block;
   cursor: pointer;
-  
 }
 
 .change .firstBar {
   transform: translate(0, 11px) rotate(-45deg);
 }
 
-.change .secondBar {opacity: 0;
+.change .secondBar {
+  opacity: 0;
 }
 
 .change .thirdBar {
   transform: translate(0, -11px) rotate(45deg);
 }
 
-#inputSurname{
-text-align: center;
-outline: none;
-border: none;
-width: 500px;
-height: 40px;
-border-radius: 19px;
+#inputSurname {
+  text-align: center;
+  outline: none;
+  border: none;
+  width: 100%;
+  max-width: 500px;
+  height: 44px;
+  border-radius: 22px;
+  padding: 0 20px;
+  font-size: 1rem;
 }
 
-.pText{
-  text-align: center;
+.pText {
   text-align: center;
   color: white;
-  font-family: poppins;
+  font-family: poppins, sans-serif;
   font-weight: 400;
+  font-size: clamp(0.95rem, 3.2vw, 1.25rem);
+  margin: 0 0 24px 0;
+  padding: 0 12px;
 }
 
-#kota{
-  color:#F8B700;
+#kota {
+  color: #F8B700;
   text-align: center;
   text-transform: lowercase;
-  
   cursor: pointer;
+}
+
+@media (max-height: 480px) {
+  body {
+    overflow-y: auto;
+    height: auto;
+  }
 }
 
