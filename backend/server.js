@@ -18,6 +18,7 @@ const app = express();
 // this is middleware that will return a static file
 
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 /**  Sets EJS as the view engine 
  * A view engine is a software component that allows 
@@ -25,7 +26,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 */
 
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
+app.set('views', path.join(__dirname, 'views'));
 
 // 2. Defining my routes
 
@@ -66,7 +67,12 @@ app.get('/surname', async (req, res) => { //:isibongo is the placeholder for the
 
 });
 
-app.listen(process.env.PORT, () => {
-    console.log(`PORT IS RUNNING at PORT ${process.env.PORT}!!`)
-});
+if (process.env.NODE_ENV !== 'production') {
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+        console.log(`PORT IS RUNNING at PORT ${PORT}!!`);
+    });
+}
+
+module.exports = app;
 
