@@ -41,6 +41,15 @@ async function getSurname(surname) {
     return returnRowOfInformation[0];
 }
 
+async function getAllSurnames() {
+    const [rows] = await pool.query(
+        `SELECT isibongo 
+        FROM surnames 
+        ORDER BY isibongo ASC`
+    );
+    return rows.map(r => r.isibongo);
+}
+
 // Quick async function that allows me to use await
 
 // (async () => {
@@ -50,4 +59,4 @@ async function getSurname(surname) {
 
 // Exporting connection for other modules to use
 
-module.exports = { getSurname };
+module.exports = { getSurname, getAllSurnames };

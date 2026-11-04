@@ -44,11 +44,15 @@ app.get('/about', (req, res) => {
  */
 
 app.get('/surname', async (req, res) => { //:isibongo is the placeholder for the actual surname
-    const surname = req.query.inputSearch // e.g cele will be stored in the variable surname
-    const foundSurname = await dbConnection.getSurname(surname)
+    const surname = (req.query.inputSearch || '').trim(); // e.g cele will be stored in the variable surname
+    const foundSurname = surname ? await dbConnection.getSurname(surname) : null;
 
     if (!foundSurname) {
-        return res.send("Surname not found!");
+        const availableSurnames = await dbConnection.getAllSurnames();
+        return res.render('not-found', {
+            searchedSurname: surname,
+            surnames: availableSurnames
+        });
     }
 
     const { id, isibongo, izithakazelo, umlando, well_known_people } = foundSurname;
