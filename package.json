@@ -1,0 +1,43 @@
+{
+  "name": "velaphi",
+  "version": "1.0.0",
+  "description": "A Web Application that helps users find out more about their family Surname through clan names, history and well known people that share that surname.",
+  "keywords": [
+    "surname",
+    "izithakazelo",
+    "velaphi",
+    "clan names",
+    "south african history"
+  ],
+  "homepage": "https://github.com/uamahlecele/velaphi#readme",
+  "bugs": {
+    "url": "https://github.com/uamahlecele/velaphi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uamahlecele/velaphi.git"
+  },
+  "license": "ISC",
+  "author": "Amahle Cele",
+  "type": "commonjs",
+  "main": "./backend/server.js",
+  "scripts": {
+    "watch:css": "tailwindcss -i ./public/src/input.css -o ./public/output.css --watch",
+    "watch:server": "nodemon server.js",
+    "dev": "concurrently \"npm run watch:css\" \"npm run watch:server\""
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "autoprefixer": "^10.5.0",
+    "concurrently": "^10.0.3",
+    "nodemon": "^3.1.14",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.0"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "ejs": "^6.0.1",
+    "mysql2": "^3.24.6",
+    "serve": "^14.2.6"
+  }
+}
