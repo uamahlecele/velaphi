@@ -1,13 +1,13 @@
 
 @import "tailwindcss";
 
-@font-face{
-  font-family: Lastik,
+@font-face {
+  font-family: Lastik;
   src: url("../src/LastikFreeFont-Free.ttf");
-
 }
-@theme{
-  --color-velaphiYellow: #ffb800;
 
-  --font-lastik: Lastik,"sans-sarif";
+@theme {
+  --color-velaphiYellow: #ffb800;
+  --font-lastik: Lastik, "sans-serif";
+  --font-sentient: sentient, serif;
 }
