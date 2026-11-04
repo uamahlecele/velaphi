@@ -16,9 +16,37 @@
 
 <body>
 
+    <!-- Background image with slow push-in animation -->
+    <div class="bg-hero" id="bgHero" aria-hidden="true"></div>
+    <script>
+        (function () {
+            const bg = document.getElementById('bgHero');
+            if (!bg) return;
+            const img = new Image();
+            img.src = '/images/16v.png';
+            function trigger() {
+                if (!bg.classList.contains('loaded')) {
+                    bg.classList.add('loaded');
+                }
+            }
+            if (img.complete) {
+                trigger();
+            } else {
+                img.addEventListener('load', trigger);
+                img.addEventListener('error', trigger);
+                setTimeout(trigger, 2500);
+            }
+        })();
+    </script>
+    <noscript>
+        <style>
+            .bg-hero { opacity: 1; transform: scale(1.055); }
+        </style>
+    </noscript>
+
     <!-- Navigation Bar  -->
 
-    <header>
+    <header class="fade-in delay-1">
         <nav class="navdiv">
             <a href="index.html">velaphi</a>
             <a href="about.html">about</a>
@@ -36,10 +64,10 @@
     </header>
 
     <main class="hero">
-        <h1 class="mainHeading">'VELAPHI</h1>
-        <p class="pText">find out more about your family surname </p>
+        <h1 class="mainHeading fade-in delay-2">'VELAPHI</h1>
+        <p class="pText fade-in delay-3">find out more about your family surname </p>
 
-        <div class="search">
+        <div class="search fade-in delay-4">
             <form action="/surname" method="get">
                 <input class="" id="inputSurname" type="text" name="inputSearch" autocomplete="off"
                     placeholder="Enter surname">
@@ -91,7 +119,7 @@
             animate.classList.toggle("change");
         }
     </script> -->
-    <footer>
+    <footer class="fade-in delay-5">
         <div id="kota">
             <a href="https://buymeacoffee.com/khumbu.za" target="_blank">Buy me a kota</a>
         </div>

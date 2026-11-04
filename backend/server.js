@@ -31,11 +31,11 @@ app.set('views', __dirname + '/views');
 
 //this is the home directory
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+    res.sendFile(path.resolve(__dirname, '../public/index.html'));
 });
 
 app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname, 'about.html')); // This returns about.html
+    res.sendFile(path.resolve(__dirname, '../public/about.html')); // This returns about.html
 });
 
 /** 
