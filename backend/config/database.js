@@ -2,47 +2,46 @@
 require("dotenv").config();
 const mysql = require("mysql2");
 
-// Create the Database Connection
-const pool = mysql.createConnection({
-    host: "localhost",
-    user: 'root',
+// Create the Database Connection Pool
+const pool = mysql.createPool({
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-
-}).promise() // using the promise api for MySQL. 
-
-// Connection is verified
-pool.connect((err) => {
-    if (err) {
-        console.log("Connection failed:", err);
-        return;
-    }
-
-    // console.log("CONNECTION SUCCESSFUL!");
-
-    // Query runs AFTER connection is established
-
-    // pool.query("SELECT * FROM surnames", (err, res) => {
-    //     if (err) {
-    //         console.log("Query failed:", err);
-    //         return;
-    //     }
-    //     console.log(res);
-    // });
+    ssl: { rejectUnauthorized: false },
+    waitForConnections: true,
+    connectionLimit: 5
 });
 
 async function getSurname(surname) {
-    const [returnRowOfInformation] = await pool.query(
+    const [rows] = await pool.promise().query(
         `SELECT * 
         FROM surnames
-        WHERE isibongo= ? 
-        `, [surname] // We pass in a ? in our query and then pass the actual query value as the second parameter seperately so that we prevent SQL Injections
-    )
-    return returnRowOfInformation[0];
+        WHERE isibongo = ?`,
+        [surname]
+    );
+
+    const record = rows[0];
+    if (!record) return null;
+
+    // Normalize JSON well_known_people column (handles both string and parsed object/array)
+    if (typeof record.well_known_people === 'string') {
+        try {
+            record.well_known_people = JSON.parse(record.well_known_people);
+        } catch (err) {
+            console.error("Failed to parse well_known_people JSON:", err);
+            record.well_known_people = [];
+        }
+    } else if (!record.well_known_people) {
+        record.well_known_people = [];
+    }
+
+    return record;
 }
 
 async function getAllSurnames() {
-    const [rows] = await pool.query(
+    const [rows] = await pool.promise().query(
         `SELECT isibongo 
         FROM surnames 
         ORDER BY isibongo ASC`
@@ -50,13 +49,5 @@ async function getAllSurnames() {
     return rows.map(r => r.isibongo);
 }
 
-// Quick async function that allows me to use await
-
-// (async () => {
-//     const surname = await getSurname('Dladla');
-//     console.log(surname);
-// })();
-
-// Exporting connection for other modules to use
-
-module.exports = { getSurname, getAllSurnames };
+// Exporting functions and pool for other modules to use
+module.exports = { getSurname, getAllSurnames, pool };

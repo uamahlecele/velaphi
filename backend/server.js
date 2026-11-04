@@ -8,7 +8,7 @@
 
 
 // 1. Express.js setup
-require("dotenv").config({ quiet: true });
+require('dotenv').config();
 const path = require('path');
 
 const express = require('express');
