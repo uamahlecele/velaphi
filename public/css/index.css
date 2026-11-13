@@ -139,7 +139,9 @@ li {
   transform: translate(0, -11px) rotate(45deg);
 }
 
-#inputSurname {
+#inputSearch,
+#inputSurname,
+.search input[type="search"] {
   text-align: center;
   outline: none;
   border: none;
@@ -149,6 +151,18 @@ li {
   border-radius: 22px;
   padding: 0 20px;
   font-size: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#inputSearch::-webkit-search-decoration,
+#inputSearch::-webkit-search-cancel-button,
+#inputSearch::-webkit-search-results-button,
+#inputSearch::-webkit-search-results-decoration {
+  display: none;
+  -webkit-appearance: none;
 }
 
 .pText {

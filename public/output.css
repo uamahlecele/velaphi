@@ -831,6 +831,16 @@
       line-height: var(--tw-leading, var(--text-8xl--line-height));
     }
   }
+  .\[\&\:\:-webkit-search-cancel-button\]\:hidden {
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+  .\[\&\:\:-webkit-search-decoration\]\:hidden {
+    &::-webkit-search-decoration {
+      display: none;
+    }
+  }
 }
 @font-face {
   font-family: Lastik;
@@ -877,6 +887,10 @@
     opacity: 1 !important;
     transform: none !important;
   }
+}
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+  -webkit-appearance: none;
 }
 @property --tw-rotate-x {
   syntax: "*";

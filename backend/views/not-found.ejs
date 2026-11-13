@@ -42,11 +42,20 @@
 
         <!-- Search Input Form -->
         <div class="w-full max-w-md mx-auto mb-10 fade-in delay-4">
-            <form action="/surname" method="get">
-                <input class="w-full h-11 px-5 rounded-full text-black text-center outline-none focus:ring-2 focus:ring-velaphiYellow bg-white placeholder-gray-500 shadow-md transition text-base"
-                       type="text" 
+            <form action="/surname" method="get" role="search">
+                <input class="w-full h-11 px-5 rounded-full text-black text-center outline-none focus:ring-2 focus:ring-velaphiYellow bg-white placeholder-gray-500 shadow-md transition text-base [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
+                       id="notFoundSearch"
+                       type="search" 
                        name="inputSearch" 
+                       role="searchbox"
                        autocomplete="off" 
+                       autocorrect="off"
+                       autocapitalize="none"
+                       spellcheck="false"
+                       data-lpignore="true"
+                       data-1p-ignore="true"
+                       data-bwignore="true"
+                       data-form-type="other"
                        placeholder="Search another surname...">
             </form>
         </div>

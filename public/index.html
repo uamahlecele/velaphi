@@ -68,9 +68,20 @@
         <p class="pText fade-in delay-3">find out more about your family surname </p>
 
         <div class="search fade-in delay-4">
-            <form action="/surname" method="get">
-                <input class="" id="inputSurname" type="text" name="inputSearch" autocomplete="off"
-                    placeholder="Enter surname">
+            <form action="/surname" method="get" role="search">
+                <input id="inputSearch" 
+                       type="search" 
+                       name="inputSearch" 
+                       role="searchbox"
+                       autocomplete="off" 
+                       autocorrect="off"
+                       autocapitalize="none"
+                       spellcheck="false"
+                       data-lpignore="true"
+                       data-1p-ignore="true"
+                       data-bwignore="true"
+                       data-form-type="other"
+                       placeholder="Enter surname">
                 <!-- <button type="submit" id="submitSurname"> Search </button> -->
             </form>
 
